@@ -87,12 +87,25 @@ section {
 
 #home {
     position: relative;
-    background-image: url('Ocean blue foam.jpg');
+    background-image: url('Forest background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: var(--light-beige);
     transform-style: preserve-3d;
+    border-bottom: 16px solid var(--navy);  /* Increased thickness and solid navy color */
+}
+
+#home::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--navy); /* Changed to solid navy color */
+    opacity: 1; /* Full opacity */
+    z-index: 2;
 }
 
 .hero {
@@ -605,11 +618,13 @@ footer {
 
 #home {
     position: relative;
-    background-image: url('Ocean blue foam.jpg');
+    background-image: url('Forest background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: var(--light-beige);
+    transform-style: preserve-3d;
+    border-bottom: 4px solid var(--navy);  /* Added border line */
 }
 
 #home::before {
@@ -668,4 +683,80 @@ footer {
     height: 2px;
     background-color: var(--navy);
     opacity: 0.7;
+}
+
+/* Add these animation keyframes at the end of your CSS file */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Add these animation classes to your existing elements */
+.hero {
+    animation: fadeInUp 1s ease-out;
+}
+
+.about-content img {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.about-text {
+    animation: slideInFromRight 1s ease-out;
+}
+
+.education, .skills, .interests {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.education { animation-delay: 0.2s; }
+.skills { animation-delay: 0.4s; }
+.interests { animation-delay: 0.6s; }
+
+.project-card {
+    animation: fadeInUp 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+.contact-item {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.contact-item:nth-child(1) { animation-delay: 0.2s; }
+.contact-item:nth-child(2) { animation-delay: 0.4s; }
+.contact-item:nth-child(3) { animation-delay: 0.6s; }
+
+.social-links a {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+    animation-delay: 0.8s;
 }

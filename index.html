@@ -107,11 +107,11 @@
                 </div>
             </div>
             
+            <!-- Update the social links with your actual profiles -->
             <div class="social-links">
-                <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://wa.me/6282136429170" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://facebook.com/HansMochi123@gmail.com" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/HansKentang" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             </div>
 
             <div class="contact-form">
@@ -142,6 +142,14 @@
         <p>&copy; 2025 Hans Kentaro. All rights reserved.</p>
     </footer>
 
+    <!-- Add these scripts before closing body tag, just above your script.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual public key
+        })();
+    </script>
+
     <script src="script.js"></script>
-</body>
+    </body>
 </html>
