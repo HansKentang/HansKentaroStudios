@@ -413,19 +413,44 @@ h2 {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .project-card {
     background-color: white;
     padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 31, 63, 0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     transform-origin: center;
+}
+
+/* Add media queries for project section */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
 }
 
 .project-card:hover {
